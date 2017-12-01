@@ -42,7 +42,7 @@ else
 		echo "Building nvBowtie index ..."
 		cd PhiX/NCBI/1993-04-28/Sequence && mkdir nvBowtieIndex
 		nvBWT WholeGenomeFasta/genome.fa nvBowtieIndex/phiX
-cd /data
+cd /data/reference
 fi
 if [ $build_genome_index_mouse = 1 ]; then
 	if [ -d /data/reference/Mus_musculus ]; then
@@ -57,7 +57,7 @@ if [ $build_genome_index_mouse = 1 ]; then
 		cd Mus_musculus/UCSC/mm10/Sequence && mkdir nvBowtieIndex
 		nvBWT WholeGenomeFasta/genome.fa nvBowtieIndex/mm10
 	fi
-cd /data
+cd /data/reference
 fi
 if [ $build_genome_index_human = 1 ]; then
 	if [ -d /data/reference/Homo_sapiens ]; then
