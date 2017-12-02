@@ -106,8 +106,12 @@ if [ $analysis_staring = 1 ]; then
 	else
 		echo "Downloading Staring_2017 datasets ..."
 		echo
-		cd /data && mkdir Staring_2017 && cd Staring_2017 && mkdir unselected && mkdir selected && \
-		fastq-dump -O unselected/ --gzip SRR663777 && \
+		cd /data && mkdir Staring_2017 && cd Staring_2017 && mkdir unselected && mkdir selected
+		if [ -e /data/Jae_2013/unselected/SRR663777.fastq.gz ]; then
+			cp /data/Jae_2013/unselected/SRR663777.fastq.gz /data/Staring_2017/unselected/
+		else
+			fastq-dump -O unselected/ --gzip SRR663777
+		fi
 		fastq-dump -O selected/ --gzip SRR4885982 && \
 		fastq-dump -O selected/ --gzip SRR4886610 && \
 		fastq-dump -O selected/ --gzip SRR4887274
@@ -119,9 +123,12 @@ if [ $analysis_jae = 1 ]; then
 	else
 		echo "Downloading Jae_2013 datasets ..."
 		echo
-		cd /data && mkdir Jae_2013 && cd Jae_2013 && mkdir unselected && mkdir selected && \
-		fastq-dump -O unselected/ --gzip SRR663777 && \
+		cd /data && mkdir Jae_2013 && cd Jae_2013 && mkdir unselected && mkdir selected
+		if [ -e /data/Staring_2017/unselected/SRR663777.fastq.gz ]; then
+			cp /data/Staring_2017/unselected/SRR663777.fastq.gz /data/Jae_2013/unselected/
+		else
+			fastq-dump -O unselected/ --gzip SRR663777
+		fi
 		fastq-dump -O selected/ --gzip SRR656615
 	fi
 fi
-
