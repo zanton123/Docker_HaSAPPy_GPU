@@ -45,7 +45,7 @@ if [ $analysis_jae = 1 ]; then
 		echo "Analysing Jae_2013 dataset"
 		HaSAPPy /HaSAPPy/docs/Jae_2013_LoadModule.txt
 	else
-		echo "Please, download Jae_2013 datasets with: init.sh Jae_2013 7 human"
+		echo "Please, download Jae_2013 datasets with: init.sh Jae_2013 human"
 	fi
 fi
 
