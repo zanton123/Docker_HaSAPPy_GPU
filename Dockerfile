@@ -67,8 +67,15 @@ RUN cd / && \
 		cp HaSAPPY.py HaSAPPy && \
 		chmod +x HaSAPPy && \
 		cp GeneReference_built.py GeneReference_built && \
-		chmod +x GeneReference_built && \
-		mv PreprocessReads /usr/local/bin/
+		chmod +x GeneReference_built
+
+# Update to the latest version of PreprocessReads (GPU) by overwriting old version
+
+COPY PreprocessReads /HaSAPPy/HaSAPPy/
+RUN chmod +x /usr/local/bin/PreprocessReads && \
+		cp PreprocessReads /usr/local/bin/
+
+# Install HaSAPPy modules
 
 RUN cd /HaSAPPy && \
 		python setup.py install
