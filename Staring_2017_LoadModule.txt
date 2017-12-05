@@ -122,10 +122,10 @@ Name of the library (add additional lines if necessary):
 @4F)cva7
 …
 Location of input file 1(add additional lines if necessary):
-@4G)/data/Staring_2017/unselected/SRR663777.fastq
-@4G)/data/Staring_2017/selected/SRR4885982.fastq
-@4G)/data/Staring_2017/selected/SRR4886610.fastq
-@4G)/data/Staring_2017/selected/SRR4887274.fastq
+@4G)/data/Staring_2017/unselected/SRR663777.fastq.gz
+@4G)/data/Staring_2017/selected/SRR4885982.fastq.gz
+@4G)/data/Staring_2017/selected/SRR4886610.fastq.gz
+@4G)/data/Staring_2017/selected/SRR4887274.fastq.gz
 …
 Location of input file 2 (if pair-end) (add additional lines if necessary):
 @4H)
@@ -173,7 +173,7 @@ Type of parameters analysed (mark ‘Y’ or ’N’):
 	Bias insertions:
 	@6D)Y
 	Reads:
-	@6E)Y
+	@6E)N
 
 
 !!!N.B. Compile the following section just if this is your starting point!!!
@@ -221,7 +221,7 @@ Type of parameters analysed (mark ‘Y’ or ’N’):
 	Bias insertions:
 	@7H)Y
 	Reads:
-	@7I)Y
+	@7I)N
 Perform Outlier analysis(mark ‘Y’ or ’N’):
 @7J)Y
 Approach used for Outlier analysis (Fill this part just if marked ‘Y’ to the previously task):
