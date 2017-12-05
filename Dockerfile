@@ -72,7 +72,7 @@ RUN cd / && \
 # Update to the latest version of PreprocessReads (GPU) by overwriting old version
 
 COPY PreprocessReads /HaSAPPy/HaSAPPy/
-RUN chmod +x /usr/local/bin/PreprocessReads && \
+RUN chmod +x /HaSAPPy/HaSAPPy/PreprocessReads && \
 		cp PreprocessReads /usr/local/bin/
 
 # Install HaSAPPy modules
